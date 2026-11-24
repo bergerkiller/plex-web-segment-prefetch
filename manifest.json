@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Plex Segment Prefetch",
+  "version": "2.0",
+  "description": "Prefetches upcoming Plex Web DASH segments in parallel and serves them to the player from memory.",
+  "content_scripts": [
+    {
+      "matches": ["https://app.plex.tv/*"],
+      "js": ["prefetch.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
